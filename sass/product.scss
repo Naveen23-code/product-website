@@ -16,19 +16,21 @@ body {
 .container {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 .header_section {
-  padding-inline: 3rem;
+  padding-inline: 2rem;
   padding-block: 1rem;
   border-bottom: 1px solid $darkColor;
   & img {
-    width: 250px;
-    height: 100px;
+    width: 150px;
+    height: 105px;
     object-position: 100%;
     cursor: pointer;
+    filter: invert(100%);
   }
-  position: relative;
-  top: 0;
+  // position: relative;
+  // top: 0;
   background-image: linear-gradient(
     rgba(255, 255, 255, 0.881),
     rgba(252, 252, 252, 0.783)
@@ -38,6 +40,7 @@ header {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .header_btn {
   font-size: 1.125rem;
@@ -51,11 +54,171 @@ header {
     cursor: pointer;
   }
 }
-.body_section {
-  display: grid;
-  .image_content img {
-    width: 500px;
-    height: 500px;
+.home_section {
+  display: flex;
+  gap: 25px;
+  // grid-template-rows: repeat(auto-fill, minmax(450px, 1fr));
+  // grid-auto-flow: row;
+  // grid-auto-rows: max-content;
+  // grid-auto-columns: auto;
+  margin: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.image_content {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+  & > img {
+    object-fit: cover;
   }
+  & > div {
+    flex: 0 1 auto;
+    // order: 3;
+  }
+  img {
+    width: 450px;
+    height: 500px;
+    // max-width: 100%;
+  }
+}
+.quote_content {
+  font-family: inherit;
+  background-image: linear-gradient(
+    180deg,
+    rgb(139, 136, 134),
+    hsl(0, 2%, 78%)
+  );
+  width: 450px;
+  height: 500px;
+  // max-width: 800px;
+  // min-width: 400px;
+  // padding: rem;
+  font-size: 2.25rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-content: center;
   gap: 10px;
+  button {
+    width: 40%;
+    height: 15%;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    background: rgb(34, 28, 28);
+    align-self: center;
+    color: white;
+  }
+}
+.image_collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+  // grid-template-rows: repeat(auto-fit, 1fr);
+  // grid-auto-flow: row;
+  // grid-auto-rows: 300px;
+  // grid-auto-columns: 300px;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  gap: 10px 15px;
+  box-sizing: border-box;
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+    max-width: 100%;
+  }
+}
+.video_content {
+  video {
+    width: 75%;
+    height: 75%;
+    padding: 0 10rem;
+  }
+}
+.brands_images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+  img {
+    width: 200px;
+    height: 100px;
+    transition: transform 0.65s ease-in-out;
+    &:hover {
+      transform: scale(1.25, 1.25);
+      box-shadow: 0px 5px 20px 0px rgb(43, 42, 42);
+    }
+  }
+}
+.brand_video {
+  display: flex;
+  height: 500px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  video {
+    align-self: center;
+    width: 20%;
+    height: 80%;
+    object-fit: cover;
+  }
+}
+.about_us {
+  font-size: 1.25rem;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  .profile_details {
+    width: 50%;
+    p {
+      word-spacing: 4px;
+    }
+  }
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .profile_image {
+    width: 450px;
+    height: 300px;
+    span {
+      text-align: center;
+    }
+  }
+  text-align: center;
+}
+.couresal {
+  .fa-solid {
+    position: absolute;
+  }
+  .fa-backwards {
+    top: 0;
+    bottom: 100%;
+    left: 15%;
+  }
+  .fa-forwards {
+    top: 100%;
+    bottom: 100%;
+    right: 50%;
+  }
+  .slider {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow: hidden;
+    img {
+      width: 250px;
+      height: 250px;
+    }
+    p {
+      width: 30%;
+    }
+  }
 }
