@@ -12,15 +12,22 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: "Barlow", sans-serif;
+  position: relative;
 }
 
 .container {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  background-image: url("https://images.unsplash.com/photo-1500964757637-c85e8a162699?q=80&w=1806&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  object-fit: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header_section {
+  z-index: 9999;
   padding-inline: 2rem;
   padding-block: 1rem;
   border-bottom: 1px solid rgb(10, 10, 10);
@@ -40,6 +47,36 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
 }
+header .close_btn i {
+  font-size: 2.5rem;
+}
+@media (width >= 850px) {
+  header .close_btn i {
+    display: none;
+  }
+}
+header .close_btn {
+  display: block;
+  margin-inline-start: auto;
+  margin-block-end: 10px;
+}
+
+.hambuger_btn {
+  align-self: center;
+}
+@media (width >= 850px) {
+  .hambuger_btn {
+    display: none;
+  }
+}
+
+.hambuger_btn i {
+  font-size: 2rem;
+}
+
+.hambuger_btn[aria-expanded=true] + .topnav_menu {
+  translate: 0;
+}
 
 .header_btn {
   font-size: 1.125rem;
@@ -52,6 +89,24 @@ header {
 }
 .header_btn li {
   cursor: pointer;
+}
+@media (width < 850px) {
+  .header_btn {
+    flex-direction: column;
+    justify-content: baseline;
+  }
+}
+
+@media (width < 850px) {
+  .topnav_menu {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to right, #a68a0f, #762889);
+    padding: 1rem;
+    translate: 100vw 0;
+    transition: translate 0.5s ease-in-out;
+    z-index: 9999;
+  }
 }
 
 .home_section {
@@ -70,9 +125,12 @@ header {
   justify-content: space-between;
   box-sizing: border-box;
   align-items: center;
+  margin: 0 auto;
+  min-width: 500px;
 }
 .image_content > img {
   object-fit: cover;
+  flex: 0 1 auto;
 }
 .image_content > div {
   flex: 0 1 auto;
@@ -81,11 +139,21 @@ header {
   width: 450px;
   height: 500px;
 }
+@media (width < 900px) {
+  .image_content img,
+  .image_content div {
+    width: 65%;
+    height: 50%;
+  }
+  .image_content div {
+    padding-block: 3rem;
+  }
+}
 
 .quote_content {
   font-family: inherit;
-  background-image: linear-gradient(180deg, rgb(139, 136, 134), hsl(0, 2%, 78%));
   width: 450px;
+  background-image: linear-gradient(90deg, rgb(177, 124, 124), rgb(71, 100, 47));
   height: 500px;
   font-size: 2.25rem;
   font-weight: 500;
@@ -121,11 +189,21 @@ header {
   position: relative;
   max-width: 100%;
 }
+@media (width <= 555px) {
+  .image_collection {
+    align-self: center;
+  }
+}
 
+.video_content {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
 .video_content video {
   width: 75%;
   height: 75%;
-  padding: 0 10rem;
+  transform: translateX(17%);
 }
 
 .brands_images {
@@ -134,6 +212,7 @@ header {
   flex-wrap: wrap;
   gap: 15px;
   justify-content: space-between;
+  margin-block: 1rem;
 }
 .brands_images img {
   width: 200px;
@@ -144,6 +223,12 @@ header {
   transform: scale(1.25, 1.25);
   box-shadow: 0px 5px 20px 0px rgb(43, 42, 42);
 }
+@media (width <= 480px) {
+  .brands_images img {
+    width: 60%;
+    margin: 1rem auto;
+  }
+}
 
 .brand_video {
   display: flex;
@@ -153,59 +238,149 @@ header {
 }
 .brand_video video {
   align-self: center;
-  width: 20%;
-  height: 80%;
+  width: 22%;
+  height: 50%;
   object-fit: cover;
+}
+@media (width <= 900px) {
+  .brand_video video {
+    width: 50%;
+  }
 }
 
 .about_us {
   font-size: 1.25rem;
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
   text-align: center;
+  margin: 0 auto;
 }
 .about_us .profile_details {
-  width: 50%;
+  max-width: 500px;
 }
 .about_us .profile_details p {
   word-spacing: 4px;
 }
-.about_us .profile_image {
+.about_us .profile_image img {
+  border-radius: 50px 50px/50px 50px;
   width: 450px;
   height: 300px;
+  object-fit: contain;
 }
-.about_us .profile_image span {
+@media (width <= 500px) {
+  .about_us p {
+    width: auto;
+  }
+  .about_us .profile_image img {
+    border-radius: none;
+    width: 400px;
+  }
+}
+
+@keyframes slides {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.swiper-container {
+  height: auto;
+  margin: 0;
+  padding: 1.525rem;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+  min-width: 200px;
+}
+
+.swiper-slide::after,
+.swiper-slider::before {
+  content: "";
+  background: linear-gradient(90deg, rgb(113, 114, 114), rgb(26, 25, 25));
+}
+
+.swiper-wrapper {
+  cursor: grab;
+}
+
+.swiper-wrapper h2,
+.swiper-wrapper p {
+  width: auto;
   text-align: center;
 }
 
-.couresal .fa-solid {
-  position: absolute;
+.swiper-slide img {
+  display: block;
+  width: 350px;
+  border-radius: 15px 50px/25px 50px;
+  object-fit: cover;
 }
-.couresal .fa-backwards {
-  top: 0;
-  bottom: 100%;
-  left: 15%;
+@media (width <= 460px) {
+  .swiper-slide img {
+    width: 150px;
+  }
 }
-.couresal .fa-forwards {
-  top: 100%;
-  bottom: 100%;
-  right: 50%;
+
+.swiper-pagination-bullet-active {
+  background-color: hsl(312, 50%, 50%);
 }
-.couresal .slider {
+
+.swiper-button-prev {
+  color: hsl(53, 100%, 50%);
+  top: 50%;
+}
+
+.swiper-button-next {
+  color: hsl(53, 100%, 50%);
+  top: 50%;
+}
+
+.contact_info {
+  background-color: rgb(0, 0, 0);
+  color: white;
   display: flex;
-  flex-direction: row;
-  gap: 20px;
-  overflow: hidden;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 2rem 4rem;
+  justify-content: space-around;
+  align-content: center;
 }
-.couresal .slider img {
-  width: 250px;
-  height: 250px;
+.contact_info .personal_contact,
+.contact_info .professional_contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.couresal .slider p {
-  width: 30%;
+.contact_info .social_media {
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+.contact_info .logo {
+  display: flex;
+  flex-direction: column;
+}
+@media (width <= 728px) {
+  .contact_info .logo {
+    order: 1;
+  }
+}
+
+input,
+label {
+  display: block;
 }
 
 /*# sourceMappingURL=product.css.map */

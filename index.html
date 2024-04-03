@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Premium Product Photograhy</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,255 +24,396 @@
   </head>
   <body>
     <div class="container">
-      <section class="header_section">
+      <section class="header_section navbar">
         <header>
-          <a href="/"
-            ><img src="images/ahi.png" alt="logo" loading="lazy" />
-          </a>
-          <nav class="header_nav header_btn">
-            <ul class="header_btn">
-              <li><a href="#home_section">Home</a></li>
-              <li><a href="#about_us_section">About Us</a></li>
-              <li><a href="#contant_section">Contact</a></li>
-              <li><a href="#shop_section">Shop</a></li>
-              <li><a href="#bolg_section">Blog</a></li>
-              <li><a href="/">Free Course</a></li>
-              <i class="fa-solid fa-cart-shopping"></i>
-            </ul>
-          </nav>
+          <div class="banner">
+            <a href="/"
+              ><img src="images/ahi.png" alt="logo" loading="lazy" />
+            </a>
+          </div>
+          <div
+            class="hambuger_btn"
+            id="btnOpen"
+            aria-expanded="false"
+            aria-labelledby="nav-label"
+          >
+            <i class="fa fa-bars"></i>
+          </div>
+          <div
+            id="btnClose"
+            class="topnav_menu header_btn"
+            role="dialog"
+            aria-labelledby="nav-label"
+          >
+            <div class="close_btn" aria-label="Close">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+            <nav class="navbar header_nav header_btn">
+              <ul class="header_btn">
+                <li><a href="/">Home</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html" class="">Contact</a></li>
+                <li><a href="#shop_section" class="">Shop</a></li>
+                <li><a href="/" class="">Blog</a></li>
+                <li><a href="/" class="">Free Course</a></li>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </ul>
+            </nav>
+          </div>
         </header>
       </section>
-      <section class="home_section">
-        <div class="image_content">
-          <img
-            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="beauty-kit"
-          />
-          <div class="quote_content">
-            <p>We create <i>impactful</i> Digital content for modern brands</p>
-            <button>Get a Quote</button>
-          </div>
-          <img
-            src="https://images.unsplash.com/photo-1631730486572-226d1f595b68?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="beauty-kit-1"
-          />
-        </div>
-        <div class="image_collection">
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-kit-2"
-            />
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1629198735660-e39ea93f5c18?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-kit-3"
-            />
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1598528738936-c50861cc75a9?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-kit-4"
-            />
-          </div>
-          <div>
-            <img
-              src="https://plus.unsplash.com/premium_photo-1679064286615-e5e4d4940dfc?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-kit-5"
-            />
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1631390179406-0bfe17e9f89d?q=80&w=1896&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-kit-6"
-            />
-          </div>
-          <div>
-            <img
-              src="https://plus.unsplash.com/premium_photo-1679064286611-ad551a46b126?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-kit-7"
-            />
-          </div>
-          <div>
-            <img
-              src="https://plus.unsplash.com/premium_photo-1661574850460-448628d28a7f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-kit-8"
-            />
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-kit-9"
-            />
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1597931752949-98c74b5b159f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-kit-10"
-            />
-          </div>
-          <div>
-            <img
-              src="https://plus.unsplash.com/premium_photo-1661583858269-08663e903abf?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-kit-11"
-            />
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1599305090505-6d7985a10277?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-fit-12"
-            />
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-fit-13"
-            />
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1555050455-f96634b5cba6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-fit-14"
-            />
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1567721913486-6585f069b332?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-fit-15"
-            />
-          </div>
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1542452255191-c85a98f2c5d1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="beauty-fit-16"
-            />
-          </div>
-        </div>
-        <div class="video_content">
-          <video autoplay loop class="videoPlayer">
-            <source src="videos/2024-03-31 18-26-22.mp4" />
-          </video>
-        </div>
-        <div class="brands">
-          <div class="brands_images">
-            <img src="images/loraeal.png" alt="loreal" />
-            <img src="images/avon.png" alt="avon" />
-            <img src="images/glossiers.png" alt="glossiers" />
-            <img src="images/rearBeauty.png" alt="RearBeauty" />
-            <img src="images/larcone.png" alt="larcone" />
-          </div>
-          <div class="brand_video">
-            <video loop class="videoPlayer">
-              <source src="videos/2024-03-31 19-28-23_Trim.mp4" />
-            </video>
-            <video loop class="videoPlayer">
-              <source src="videos/2024-03-31 19-42-35.mp4" />
-            </video>
-            <video loop class="videoPlayer">
-              <source src="videos/2024-03-31 20-10-43.mp4" />
-            </video>
-            <video autoplay loop class="videoPlayer">
-              <source src="videos/2024-03-31 20-12-49.mp4" />
-            </video>
-          </div>
-        </div>
-        <div class="about_us">
-          <div class="profile_details">
-            <h2>Titled By:</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Quibusdam praesentium, perspiciatis beatae deleniti accusantium
-              sed nesciunt omnis nostrum dignissimos provident nisi vel magnam
-              tempore excepturi saepe, a officiis unde accusamus.
-            </p>
-          </div>
-          <div class="profile_image"><span>image_placeholder</span></div>
-        </div>
-        <div class="couresal">
-          <i class="fa-solid fa-backward btn_prev"></i>
-          <div class="slider">
-            <div class="cosmetics_1">
+      <main>
+        <div class="tab_control">
+          <section class="home_section">
+            <div class="image_content">
               <img
-                src="https://images.unsplash.com/photo-1597931752949-98c74b5b159f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="cosmetics_1"
+                src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="beauty-kit"
               />
-              <h2>Cosmetics_1</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                atque dicta voluptatem nesciunt eum ad recusandae magnam,
-                quidem.
-              </p>
-            </div>
-            <div class="cosmetics_2">
+              <div class="quote_content">
+                <p>
+                  We create <i>impactful</i> Digital content for modern brands
+                  <br />
+                  <i class="fa-solid fa-quote-left"></i> AHI Studios
+                </p>
+                <button>Get a Quote</button>
+              </div>
               <img
-                src="https://images.unsplash.com/photo-1597931752949-98c74b5b159f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="cosmetics_1"
+                src="https://images.unsplash.com/photo-1631730486572-226d1f595b68?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="beauty-kit-1"
               />
-              <h2>Cosmetics_3</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                atque dicta voluptatem nesciunt eum ad recusandae magnam,
-                quidem.
-              </p>
             </div>
-            <div class="cosmetics_3">
-              <img
-                src="https://images.unsplash.com/photo-1597931752949-98c74b5b159f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="cosmetics_1"
+            <div class="image_collection">
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-kit-2"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1629198735660-e39ea93f5c18?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-kit-3"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1598528738936-c50861cc75a9?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-kit-4"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1679064286615-e5e4d4940dfc?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-kit-5"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1631390179406-0bfe17e9f89d?q=80&w=1896&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-kit-6"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1679064286611-ad551a46b126?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-kit-7"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1661574850460-448628d28a7f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-kit-8"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-kit-9"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1597931752949-98c74b5b159f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-kit-10"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://plus.unsplash.com/premium_photo-1661583858269-08663e903abf?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-kit-11"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1599305090505-6d7985a10277?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-fit-12"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-fit-13"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1555050455-f96634b5cba6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-fit-14"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1567721913486-6585f069b332?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-fit-15"
+                />
+              </div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1542452255191-c85a98f2c5d1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="beauty-fit-16"
+                />
+              </div>
+            </div>
+            <div class="video_content">
+              <video autoplay loop class="videoPlayer">
+                <source src="videos/2024-03-31 18-26-22.mp4" />
+              </video>
+            </div>
+            <div class="brands">
+              <span>Sponsored By:</span>
+              <div class="brands_images">
+                <img src="images/loraeal.png" alt="loreal" />
+                <img src="images/avon.png" alt="avon" />
+                <img src="images/glossiers.png" alt="glossiers" />
+                <img src="images/rearBeauty.png" alt="RearBeauty" />
+                <img src="images/larcone.png" alt="larcone" />
+              </div>
+              <div class="brand_video">
+                <video loop class="videoPlayer" autoplay>
+                  <source src="videos/2024-03-31 19-28-23_Trim.mp4" />
+                </video>
+                <video loop class="videoPlayer">
+                  <source src="videos/2024-03-31 19-42-35.mp4" />
+                </video>
+                <video loop class="videoPlayer">
+                  <source src="videos/2024-03-31 20-10-43.mp4" />
+                </video>
+                <video loop class="videoPlayer">
+                  <source src="videos/2024-03-31 20-12-49.mp4" />
+                </video>
+              </div>
+            </div>
+            <div class="about_us">
+              <div class="profile_details">
+                <h2 contenteditable="true">
+                  <i class="fa-solid fa-quote-left"></i> Ahi Studios
+                </h2>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Quibusdam praesentium, perspiciatis beatae deleniti
+                  accusantium sed nesciunt omnis nostrum dignissimos provident
+                  nisi vel magnam tempore excepturi saepe, a officiis unde
+                  accusamus.
+                </p>
+              </div>
+              <div class="profile_image">
+                <img
+                  src="https://assets.entrepreneur.com/content/3x2/2000/1607369610-GettyImages-1277665587.jpg"
+                  alt="influencer"
+                />
+              </div>
+            </div>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                  <img
+                    src="https://images.unsplash.com/photo-1597931752949-98c74b5b159f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="cosmetics_1"
+                  />
+                  <h2>Cosmetics_1</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi atque dicta voluptatem nesciunt eum ad recusandae
+                    magnam, quidem.
+                  </p>
+                </div>
+                <div class="swiper-slide cosmetics_2">
+                  <img
+                    src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="cosmetics_2"
+                  />
+                  <h2>Cosmetics_2</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi atque dicta voluptatem nesciunt eum ad recusandae
+                    magnam, quidem.
+                  </p>
+                </div>
+                <div class="swiper-slide cosmetics_3">
+                  <img
+                    src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="cosmetics_3"
+                  />
+                  <h2>Cosmetics_3</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi atque dicta voluptatem nesciunt eum ad recusandae
+                    magnam, quidem.
+                  </p>
+                </div>
+                <div class="swiper-slide cosmetics_4">
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1679064286615-e5e4d4940dfc?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="cosmetics_4"
+                  />
+                  <h2>Cosmetics_4</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi atque dicta voluptatem nesciunt eum ad recusandae
+                    magnam, quidem.
+                  </p>
+                </div>
+                <div class="swiper-slide cosmetics_5">
+                  <img
+                    src="https://images.unsplash.com/photo-1631390179406-0bfe17e9f89d?q=80&w=1896&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="cosmetics_5"
+                  />
+                  <h2>Cosmetics_5</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi atque dicta voluptatem nesciunt eum ad recusandae
+                    magnam, quidem.
+                  </p>
+                </div>
+                <div class="swiper-slide cosmetics_6">
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1679064286611-ad551a46b126?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="cosmetics_1"
+                  />
+                  <h2>Cosmetics_6</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi atque dicta voluptatem nesciunt eum ad recusandae
+                    magnam, quidem.
+                  </p>
+                </div>
+                <div class="swiper-slide cosmetics_7">
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1661574850460-448628d28a7f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="cosmetics_1"
+                  />
+                  <h2>Cosmetics_7</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi atque dicta voluptatem nesciunt eum ad recusandae
+                    magnam, quidem.
+                  </p>
+                </div>
+                <div class="swiper-slide cosmetics_8">
+                  <img
+                    src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="cosmetics_1"
+                  />
+                  <h2>Cosmetics_8</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Animi atque dicta voluptatem nesciunt eum ad recusandae
+                    magnam, quidem.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+            <footer>
+              <div class="contact_info">
+                <div class="personal_contact">
+                  <p>Creator Contact</p>
+                  <div class="contact_no">
+                    <p>contact us:<a href="tel:909090909">909090909</a></p>
+                  </div>
+                  <div class="contact_email">
+                    <p>
+                      contact mail: <a href="mailto:dummy@gmail.com">gmail</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="logo">
+                  <a href="/">
+                    <img
+                      src="images/ahi.png"
+                      alt="logo"
+                      width="150"
+                      height="100"
+                  /></a>
+                  <div class="social_media">
+                    <a href="https://www.instagram.com/ahi.studios/"
+                      ><i class="fa-brands fa-instagram"></i
+                    ></a>
+                    <a href="https://www.instagram.com/ahi.studios/"
+                      ><i class="fa-brands fa-twitter"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="professional_contact">
+                  <p>Professional Contact</p>
+                  <div class="professional_contact_no">
+                    <p>Reach At: <a href="tel:000000000">0000000000</a></p>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </section>
+          <!-- <section id="about_us_section">
+          <form action="/">
+            <div class="input-group">
+              <label for="name-label">Name</label>
+              <input
+                class="input-control"
+                type="text"
+                id="name"
+                name="user-name"
+                placeholder="Enter your name"
+                required
               />
-              <h2>Cosmetics_4</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                atque dicta voluptatem nesciunt eum ad recusandae magnam,
-                quidem.
-              </p>
+              <span id="message"></span>
             </div>
-            <div class="cosmetics_4">
-              <img
-                src="https://images.unsplash.com/photo-1597931752949-98c74b5b159f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="cosmetics_1"
+            <div class="input-group">
+              <label for="email-label">Email</label
+              ><input
+                class="input-control"
+                type="email"
+                id="email"
+                name="user-email"
+                placeholder="Enter your Email"
+                required
               />
-              <h2>Cosmetics_5</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                atque dicta voluptatem nesciunt eum ad recusandae magnam,
-                quidem.
-              </p>
+              <span id="message"></span>
             </div>
-            <div class="cosmetics_5">
-              <img
-                src="https://images.unsplash.com/photo-1597931752949-98c74b5b159f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="cosmetics_1"
-              />
-              <h2>Cosmetics_5</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                atque dicta voluptatem nesciunt eum ad recusandae magnam,
-                quidem.
-              </p>
+            <div class="input-group">
+              <label for="age-label"
+                >Age<small>(optional)</small
+                ><input
+                  class="input-control"
+                  type="number"
+                  id="age-number"
+                  name="user-age"
+                  placeholder="Enter your age"
+                  max="120"
+                  min="18"
+                  required
+              /></label>
             </div>
-            <div class="cosmetics_6">
-              <img
-                src="https://images.unsplash.com/photo-1597931752949-98c74b5b159f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="cosmetics_1"
-              />
-              <h2>Cosmetics_6</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                atque dicta voluptatem nesciunt eum ad recusandae magnam,
-                quidem.
-              </p>
-            </div>
-          </div>
-          <i class="fa-solid fa-forward btn_next"></i>
+          </form>
+        </section> -->
+          <!-- <section class="Contact"></section>
+        <section class="Shop"></section>
+        <section class="Blog"></section>
+        <section class="Free Course"></section> -->
         </div>
-      </section>
-      <!-- <section class="Portifolio"></section>
-      <section class="Contact"></section>
-      <section class="Shop"></section>
-      <section class="Blog"></section>
-      <section class="Free Course"></section> -->
+      </main>
     </div>
     <script>
       const videos = document.querySelectorAll(".brand_video video");
@@ -285,6 +430,7 @@
         }
       }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       var videoPlayer = document.querySelector(".videoPlayer");
       videoPlayer.addEventListener("click", function (e) {
@@ -297,5 +443,6 @@
         }
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
   </body>
 </html>
